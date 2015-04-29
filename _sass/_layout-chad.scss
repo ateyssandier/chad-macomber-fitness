@@ -1,0 +1,103 @@
+/**
+ * Site header
+ */
+.site-header {
+    .top-bar {
+    	background-color: $dark-blue-background;
+    	background-image: url('../images/background.jpg');
+    	background-size: 1440px 810px;
+    	background-repeat: repeat-x;
+    	height: 40px;
+    	border-bottom: 1px solid $brand-color; 
+
+    	.contact-info {
+    		display: inline;
+			.phone-number, .email {
+    			font-family: "Avenir";
+    			color: $white-text;
+    			font-size: 10pt;
+    			display: inline;
+	    	}
+	    	.phone-number::before {
+	    		content: url('../images/icons/phone.png');
+	    	}
+	    	.email::before {
+	    		content: url('../images/icons/mail.png');
+	    	}
+    	}
+
+    	.social-links {
+    		display: inline;
+    		float: right;
+		}	
+
+    	
+    }
+
+    .main-image {
+    	height: 638px;
+    	width: 100%;
+    	background-color: $transparent-dark-blue;
+    	position: relative;
+
+	    .image-carousel {
+	    	width: 100%;
+	    	height: 638px;
+	    }
+
+
+	    .site-nav {
+	    	position: absolute;
+	    	bottom: 0px;
+	    	left: 0px;
+	    	width: 100%;
+	    	height: 118px;
+	    	border-top: 1px solid $brand-color; 
+    		.wrapper {
+
+    			float: right;
+		    	a {
+    				font-family: "Oswald Regular";
+    				font-size: 38pt;
+	    		}
+    		}
+	    	
+	    	background: -moz-linear-gradient(top, rgba(15,25,38,0.65) 0%, rgba(0,1,1,0) 98%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(15,25,38,0.65)), color-stop(98%,rgba(0,1,1,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a60f1926', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+	    }
+    }
+
+
+    .name-overlay {
+    	.title {
+			font-family: "Oswald Stencil";
+    		font-weight: bold;    
+    		font-size: 48pt;		
+    	}
+    	.subtitle {
+    		font-family: "Lato";
+    		font-weight: thin;
+    		font-size: 20pt;
+    		line-height: 5px;
+    	}
+    	color: $white-text;
+    	height: 122px;	  
+    	top: 86px;  	
+    	margin-left: 800px;
+    	background-color: $transparent-dark-blue;
+    	opacity: .7;
+    	width: 100%;
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+    	padding-left: 10px;
+    	position: absolute;
+    }
+
+
+}
