@@ -15,20 +15,33 @@
 			.phone-number, .email {
     			font-family: "Avenir";
     			color: $white-text;
-    			font-size: 10pt;
+    			font-size: 10px;
     			display: inline;
 	    	}
-	    	.phone-number::before {
-	    		content: url('../images/icons/phone.png');
+	    	.email {
+	    		margin-left: 20px;
 	    	}
-	    	.email::before {
-	    		content: url('../images/icons/mail.png');
+	    	.icon img {
+	    		width: 15px;
+	    		height: 15px;
+	    		padding-right: 5px;
 	    	}
     	}
 
     	.social-links {
     		display: inline;
     		float: right;
+    		font-size: 20px;
+    		padding-top: 7px;
+    		a {
+    			margin-left: 5px;
+	    		color: $dark-grey-text;
+	    		&:hover {
+	    			color: $light-grey-text;
+	    			text-decoration: none;	
+	    		}    			
+    		}
+    		
 		}	
 
     	
@@ -54,8 +67,6 @@
 	    	height: 118px;
 	    	border-top: 1px solid $brand-color; 
     		.wrapper {
-
-    			float: right;
 		    	a {
     				font-family: "Oswald Regular";
     				font-size: 38pt;

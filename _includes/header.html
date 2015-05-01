@@ -3,41 +3,37 @@
     <div class="top-bar">
       <div class="wrapper">
         <div class="contact-info">
-          <div class="phone-number">{{site.phonenumber}}</div>
-          <div class="email">{{site.email}}</div>
+
+          <div class="phone-number"><span class="icon phone"><img src="/images/icons/phone.png"/></span><span>{{site.phonenumber}}</span></div>
+          <div class="email"><span class="icon email"><img src="/images/icons/mail.png"/></span><span>{{site.email}}</span></div>
         </div>
         <div class="social-links">
           <span>
             <a class="social facebook" href="{{ site.facebookurl }}/">
-              <img src="/images/icons/facebook.png" alt="Like our faceook page" />
+              <i class="fa fa-facebook"></i> 
             </a>
           </span>
           <span>
             <a class="social linkedin" href="{{ site.linkedin }}/">
-              <img src="/images/icons/linkedin.png" alt="Checkout my linkedIn" />
+              <i class="fa fa-linkedin "></i> 
             </a>
           </span>
           <span>
             <a class="social rss" href="{{ site.rss }}/">
-              <img src="/images/icons/rss.png" alt="Subscribe to my rss feed" />
+              <i class="fa fa-rss "></i> 
             </a>
           </span>
           <span>
             <a class="social twitter" href="{{ site.twitter_username }}/">
-              <img src="/images/icons/pinterest.png" alt="See pinterest junk" />
-            </a></span>
+              <i class="fa fa-twitter "></i> 
+            </a>
+          </span>
         </div>
       </div>      
     </div>
 
     <div class="main-image">
-      <div class="image-carousel">
-        <div id="header-carousel" class="owl-carousel">
-          <div><img src="/images/carousel/greyscale.png"/></div>
-          <div><img src="/images/carousel/closeup.png" /></div>
-          <div><img src="/images/carousel/kick.png" /></div>
-        </div>
-      </div>
+      {% include slider.html %}
       <nav class="site-nav">
         <div class="wrapper">
           <a class="page-link" href="">ABOUT</a>
