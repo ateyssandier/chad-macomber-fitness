@@ -59,18 +59,92 @@
 	    }
 
 
-	    .site-nav {
+	    
+    }
+
+	.site-nav.fixed {
+		position: fixed;
+		top: 0px;
+		background-color: $transparent-dark-blue;
+		opacity: .8;
+		height: 70px;
+		z-index: 9999;
+
+	  	transition: all 0.3s;
+  		-moz-transition: all 0.3s;
+  		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+
+		a {
+			font-size: 26px;
+
+		  	transition: font-size 0.3s;
+	  		-moz-transition: font-size 0.3s;
+	  		-webkit-transition: font-size 0.3s;
+			-o-transition: font-size 0.3s;
+
+			&:hover{
+				margin-top: -15px;
+				color: $brand-color;
+
+				-webkit-transition:color margin-top 1s ease-in;
+	 		  	-moz-transition:color margin-top 1s ease-in ; 
+				-o-transition:color margin-top 1s ease-in ; 
+   				transition:color margin-top 1s ease-in ;
+			}	
+
+
+		}
+		.logo {
+			margin-top: 6px;
+			width: 150px;
+
+			-webkit-transition:width margin-top 0.3s ease-in;
+		    -moz-transition:width margin-top 0.3s ease-in; 
+			-o-transition:width margin-top 0.3s ease-in; 
+			transition:width margin-top 0.3s ease-in;
+		}
+	}	
+
+    .site-nav {
 	    	position: absolute;
 	    	bottom: 0px;
 	    	left: 0px;
 	    	width: 100%;
 	    	height: 118px;
 	    	border-top: 1px solid $brand-color; 
+
+		  	transition: height color 0.3s;
+	  		-moz-transition: height color 0.3s;
+	  		-webkit-transition: height color 0.3s;
+			-o-transition: height color 0.3s;
+
+    		a {
+				font-family: "Oswald Regular";
+				font-size: 38px;
+				margin-left: 30px;
+				color: $white-text;
+
+
+				&:hover{
+					margin-top: -15px;
+					text-decoration: none;
+					color: $brand-color;
+
+					-webkit-transition:color margin-top 1s ease-in;
+		 		  	-moz-transition:color margin-top 1s ease-in ; 
+					-o-transition:color margin-top 1s ease-in ; 
+	   				transition:color margin-top 1s ease-in ;
+				}
+    		}
+    		.logo {
+    			display: inline-block;
+    			margin-top: 20px;
+    		}
     		.wrapper {
-		    	a {
-    				font-family: "Oswald Regular";
-    				font-size: 38pt;
-	    		}
+    			padding-left: 0px;
+    			padding-right: 0px;
+    			max-width: $content-width;
     		}
 	    	
 	    	background: -moz-linear-gradient(top, rgba(15,25,38,0.65) 0%, rgba(0,1,1,0) 98%, rgba(0,0,0,0) 100%); /* FF3.6+ */
@@ -82,7 +156,6 @@
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a60f1926', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
 	    }
-    }
 
 
     .name-overlay {
@@ -100,7 +173,7 @@
     	color: $white-text;
     	height: 122px;	  
     	top: 86px;  	
-    	margin-left: 800px;
+    	margin-left: 55%;
     	background-color: $transparent-dark-blue;
     	opacity: .7;
     	width: 100%;

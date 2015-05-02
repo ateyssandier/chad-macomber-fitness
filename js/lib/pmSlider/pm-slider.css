@@ -48,17 +48,18 @@ video {
 .pm-pulse-arrow {
 	border-left: 40px solid transparent;
     border-right: 40px solid transparent;
-    border-top: 30px solid #252f3e;	
+    border-top: 30px solid #0F1926;	
 	max-height: 50px;
     max-width: 50px;
     overflow: auto;
 	margin:0 auto;
+	display: none;
 }
 
 .pm-slider {
 	opacity:0;
 	overflow:hidden;
-	height:700px;
+	height:638px;
 	position: relative;
 	margin:0;
 	overflow: hidden;
@@ -104,6 +105,7 @@ video {
 	float: left;
 	display: block;
 	margin: 0;
+	margin-top: -1px;
 	padding: 0;
 	position:relative;
 	
@@ -150,15 +152,17 @@ video {
 	/*background: #378fc3;*/
 }
 
-.pm-slider div.pm-next {
+div.pm-next {
     background-color:transparent !important;
     color: #FFFFFF;
-    display: inline-block;
+    display: inline;
     font-size: 20px;
     padding:10px 20px;
 	overflow:hidden;
 	width:15px;
 	height:22px;
+	position: relative;
+	top: -15px;
 	
 	transition:all 0.3s ease 0s;
 	-moz-transition:all 0.3s ease 0s;
@@ -167,8 +171,8 @@ video {
 }
 
 
-.pm-slider div.pm-prev {
-	display: inline-block;
+div.pm-prev {
+	display: inline;
 	background-color:transparent !important;
 	padding:10px 20px;
 	color: #FFFFFF;
@@ -176,6 +180,8 @@ video {
 	overflow:hidden;
 	width:15px;
 	height:22px;
+	position: relative;
+	top: -15px;
 	
 	transition:all 0.3s ease 0s;
 	-moz-transition:all 0.3s ease 0s;
@@ -225,14 +231,15 @@ video {
 
 /* BULLETS */
 .pm-dots {
-	position: absolute;
+	position: relative;
 	bottom: 0px;
 	white-space: nowrap;
 	text-align: center;
 	width: 100%;
-	padding:15px 10px 10px;
+	padding: 10px 10px;
 	z-index:3000;
-	background-color:rgba(24, 36, 51, .9);
+	background-color: #0F1926;
+	height: 46px;
 }
 
 
@@ -240,10 +247,10 @@ video {
 	display: inline-block;
 	width: 34px;
 	height: 34px;
-	margin: 1px;
+	margin: 3px;
 	cursor: pointer;
-	border: 2px solid transparent;
-	background-color:#494949;
+	border: 4px solid transparent;
+	background-color:#455268;
 	
 	transition:all 0.3s ease 0s;
 	-webkit-transition:all 0.3s ease 0s;
@@ -253,7 +260,7 @@ video {
 
 
 .pm-dots span.pm-currentDot {
-	background-color:#f6d600;
+	background-color:#4DBA00;
 	box-shadow: 0 0 0 0px grey;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;

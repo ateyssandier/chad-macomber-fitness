@@ -247,7 +247,9 @@
 						var dot = i === this.current ? '<span class="pm-currentDot"></span>' : '<span></span>';
 						dots += dot;
 					}
-					var navDots = $( '<div class="pm-dots"/>' ).append( dots ).appendTo( this.$el );
+					
+					var navDots = $( '<div class="pm-dots"/>' ).append( dots ).appendTo( this.$el.parent() );
+					var downArrow = $( '<div class="pm-pulse-arrow"/>').appendTo(this.$el.parent())
 					this.$navDots = navDots.children( 'span' );
 					//console.log(this.$navDots.length);
 					
