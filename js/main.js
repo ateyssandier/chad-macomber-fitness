@@ -14,18 +14,17 @@ $(document).ready(function() {
  
 });
 
-function contact_form(){
+function contact_form(e){
     var formObj = $(this);
     var formURL = formObj.attr("action");
+
     var formData = new FormData(this);
     $.ajax({
         url: formURL,
-    type: 'POST',
+        type: 'POST',
         data:  formData,
-    mimeType:"multipart/form-data",
-    contentType: false,
-        cache: false,
-        processData:false,
+        dataType: 'json',
+        encode: true
     success: function(data, textStatus, jqXHR)
     {
         alert('success');
