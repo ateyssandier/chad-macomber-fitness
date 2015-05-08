@@ -21,7 +21,7 @@ function contact_form(e){
     var formData = {
         'name'    : $('input[name=name]').val(),
         'email'   : $('input[name=email]').val(),
-        'phone'   : $('input[name=phone]').val()
+        'phone'   : $('input[name=phone]').val(),
         'message'   : $('input[name=message]').val()
     };
 
