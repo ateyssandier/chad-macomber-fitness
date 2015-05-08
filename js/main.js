@@ -33,9 +33,11 @@ function contact_form(e){
         encode: true,
         success: function(data, textStatus, jqXHR){
             alert('success');
+
         },
         error: function(jqXHR, textStatus, errorThrown){
             alert('fail!!!!');
+            $('##contact')[0].reset();
         }          
         });
     e.preventDefault(); //Prevent Default action. 
@@ -43,7 +45,7 @@ function contact_form(e){
 
 function init_feed(){
     jQuery.getFeed({
-            url: 'https://fitsquared.wordpress.com/feed/',
+            url: 'http://blog.alexteyssandier.com/rss.xml',
             success: function(feed) {
             alert(feed.title);
         }
