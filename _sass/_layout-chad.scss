@@ -66,44 +66,90 @@
 		position: fixed;
 		top: 0px;
 		background-color: $transparent-dark-blue;
-		opacity: .8;
+		background-color: rgba(15, 25, 38, 0.8);
 		height: 70px;
 		z-index: 9999;
 
-	  	transition: all 0.3s;
-  		-moz-transition: all 0.3s;
-  		-webkit-transition: all 0.3s;
-		-o-transition: all 0.3s;
+	  	transition: all 0.3s ease-in;
+  		-moz-transition: all 0.3s ease-in;
+  		-webkit-transition: all 0.3s ease-in;
+		-o-transition: all 0.3s ease-in;
 
-		a {
-			font-size: 26px;
+		.links {
+			margin-left: 40px;
+			display: inline-block;
 
-		  	transition: font-size 0.3s;
-	  		-moz-transition: font-size 0.3s;
-	  		-webkit-transition: font-size 0.3s;
-			-o-transition: font-size 0.3s;
+			a {
+				font-size: 18px;
+				font-style: Lato;
+				font-weight: thin;
+				margin-left: 40px;
 
-			&:hover{
-				margin-top: -15px;
-				color: $brand-color;
+		  		transition: all 0.3s ease-in;
+	  			-moz-transition: all 0.3s ease-in;
+  				-webkit-transition: all 0.3s ease-in;
+				-o-transition: all 0.3s ease-in;
+			}
+		}	
 
-				-webkit-transition:color margin-top 1s ease-in;
-	 		  	-moz-transition:color margin-top 1s ease-in ; 
-				-o-transition:color margin-top 1s ease-in ; 
-   				transition:color margin-top 1s ease-in ;
-			}	
-
-
-		}
 		.logo {
 			margin-top: 6px;
 			width: 150px;
+
+			img.large {
+				display: none;
+			}
+			img.small {
+				display: inline-block;
+			}
 
 			-webkit-transition:width margin-top 0.3s ease-in;
 		    -moz-transition:width margin-top 0.3s ease-in; 
 			-o-transition:width margin-top 0.3s ease-in; 
 			transition:width margin-top 0.3s ease-in;
 		}
+	}
+
+	.site-nav.big {
+		height: 118px;
+
+	  	transition: height 0.3s ease-in;
+  		-moz-transition: height 0.3s ease-in;
+  		-webkit-transition: height 0.3s ease-in;
+		-o-transition: height 0.3s ease-in;
+
+		.logo {
+			margin-top: 20px;
+
+			img.large {
+				display: inline-block;
+				position: absolute;
+				z-index: 9999;
+			}
+
+			img.small {
+				display: none;
+			}
+
+			-webkit-transition:width margin-top 0.3s ease-in;
+		    -moz-transition:width margin-top 0.3s ease-in; 
+			-o-transition:width margin-top 0.3s ease-in; 
+			transition:width margin-top 0.3s ease-in;
+		}
+
+		.links {
+			margin-left: 200px;
+
+			a {
+				font-size: 38px;
+
+		  		transition: all 0.3s ease-in;
+	  			-moz-transition: all 0.3s ease-in;
+  				-webkit-transition: all 0.3s ease-in;
+				-o-transition: all 0.3s ease-in;
+			}
+		}
+
 	}	
 
     .site-nav {
@@ -111,50 +157,38 @@
 	    	bottom: 0px;
 	    	left: 0px;
 	    	width: 100%;
-	    	height: 118px;
 	    	border-top: 1px solid $brand-color; 
-
-		  	transition: height color 0.3s;
-	  		-moz-transition: height color 0.3s;
-	  		-webkit-transition: height color 0.3s;
-			-o-transition: height color 0.3s;
 
     		a {
 				font-family: "Oswald Regular";
-				font-size: 38px;
 				margin-left: 30px;
 				color: $white-text;
-
+				vertical-align: middle;
 
 				&:hover{
 					margin-top: -15px;
 					text-decoration: none;
 					color: $brand-color;
-
-					-webkit-transition:color margin-top 1s ease-in;
-		 		  	-moz-transition:color margin-top 1s ease-in ; 
-					-o-transition:color margin-top 1s ease-in ; 
-	   				transition:color margin-top 1s ease-in ;
 				}
     		}
+
     		.logo {
     			display: inline-block;
-    			margin-top: 20px;
     		}
+
     		.wrapper {
     			padding-left: 0px;
     			padding-right: 0px;
     			max-width: $content-width;
     		}
-	    	
-	    	background: -moz-linear-gradient(top, rgba(15,25,38,0.65) 0%, rgba(0,1,1,0) 98%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(15,25,38,0.65)), color-stop(98%,rgba(0,1,1,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* IE10+ */
-			background: linear-gradient(to bottom, rgba(15,25,38,0.65) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a60f1926', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
+    		background: -moz-linear-gradient(top,  rgba(15,25,38,1) 0%, rgba(0,1,1,0) 98%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(15,25,38,1)), color-stop(98%,rgba(0,1,1,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1926', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 	    }
 
 
@@ -175,7 +209,7 @@
     	top: 86px;  	
     	margin-left: 55%;
     	background-color: $transparent-dark-blue;
-    	opacity: .7;
+		background-color: rgba(15, 25, 38, 0.7);
     	width: 100%;
     	padding-top: 30px;
     	padding-bottom: 30px;
@@ -183,5 +217,439 @@
     	position: absolute;
     }
 
+
+}
+
+.animated.first {
+	visibility: visible;
+	-webkit-animation-delay: 0.3s; 
+	-moz-animation-delay: 0.3s; 
+	animation-delay: 0.3s;
+	}
+.animated.second {
+	visibility: visible;
+	-webkit-animation-delay: 0.6s; 
+	-moz-animation-delay: 0.6s; 
+	animation-delay: 0.6s;
+}
+.animated.third {
+	visibility: visible;
+	-webkit-animation-delay: 0.9s; 
+	-moz-animation-delay: 0.9s; 
+	animation-delay: 0.9s;
+}
+
+/** three squares
+**
+*/
+.three-squares{
+	text-align: justify;
+	width: $content-width;
+	padding-left: 0px;
+	padding-right: 0px;
+
+	.squares {
+		padding-top: 140px;
+		padding-bottom: 125px;
+
+		.square {
+			border: 2px solid $medium-blue;
+			border-radius: 40px;
+			width: 210px;
+			height: 256px;
+
+			padding-top: 37px;
+			padding-bottom: 37px;
+			padding-left: 20px;
+			padding-right: 20px;
+			display: inline-block;
+
+			.square-text {
+				font-family: Avenir-Book;
+				font-size: 20px;
+				color: $dark-grey-text;
+				line-height: 30px;
+				text-align: center;
+			}
+		}
+
+		.icon {
+			width: 80px;
+			margin: 0 auto;
+			img {
+				width: 80px;
+			}
+		}
+		.triangle {
+			width: 0;
+			height: 0;
+			border-left: 125px solid white;
+			border-right: 125px solid white;
+			border-top: 50px solid $brand-color;
+			display: block;
+			text-align: center;
+			margin-top: 30px;
+			margin-left: -20px;
+		}
+
+		.triangle-text {
+		  	position: absolute;
+	 		display: block;
+			margin-top: -43px;
+		  	font-size: 15px;
+		  	font-family: arial;
+		  	font-weight: bold;
+	  		text-transform: uppercase;
+		  	margin-left: -40px;
+		  	width: 50px;
+		}
+
+		.circle {
+			margin: 0 auto;
+			width: 8px;
+			height: 8px;
+			background: #D3D5DA;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			margin-top: 25px;
+  			margin-bottom: 5px;
+		}
+	}
+}
+
+/**
+* Contact section
+*/
+.contact-full {
+	width: 100%;
+	background-color: $dark-blue-background;
+	background-image: url('../images/background.jpg');
+	background-size: 1440px 810px;
+	background-repeat: repeat-x;
+	height: 650px;
+	background-attachment: fixed;
+
+	.contact-content {
+		max-width: 986px;
+		height: 100%;
+
+	}
+
+	.contact-float {
+		float: left;
+		width: 585px;
+		margin-top: 100px;
+
+
+		.title-text {
+			text-transform: uppercase;
+			.title-one {
+				font-family: Lato-Regular;
+				font-size: 24px;
+				color: #4DBA00;
+				line-height: 29px;
+			}
+			.title-two {
+				font-family: AbadiMT-CondensedExtraBold;
+				font-size: 64px;
+				color: #FFFFFF;
+				line-height: 50px;
+			}
+
+		}
+
+		.contact-image {
+			width: 585px;
+			height: 359px;
+			position: relative;
+
+			.corner-triangle {
+				width: 0;
+				height: 0;
+				border-top: 100px solid $brand-color;
+				border-left: 100px solid transparent;
+				right: 0px;
+				position: absolute;
+			}
+
+			.info-overlay {
+		    	span {
+		    		font-family: Avenir-Book;
+					font-size: 20px;
+					text-align: right;
+			    	color: $white-text;
+			    	float: right;
+			    	margin-right: 15px;
+			    	margin-top: 8px;
+
+		    	}
+	    		position: absolute;
+		    	height: 48px;	  
+		    	width: 250px;
+		    	top: 275px;
+		    	right: 0px; 
+		    	background-color: $transparent-dark-blue;
+				background-color: rgba(15, 25, 38, 0.8);
+		    		    	
+		    }
+
+		    .green-square {
+		    	position: absolute;
+		    	top: 295px;
+		    	left: 310px;
+	    		background-color: $brand-color;
+	    		width: 40px;
+	    		height: 38px;
+	    		img {
+					display: block;
+	    			width: 20px;    			
+	    			margin-left: auto;
+	    			margin-right: auto;
+	    			margin-top: 6px;
+	    		}
+	    	}
+		}
+	}
+
+	.form-block {
+		height: 100%;
+		width: 315px;
+		background-color: $transparent-dark-blue;
+		background-color: rgba(15, 25, 38, 0.7);
+		float: right;
+
+		.top-rectangle {
+			width: 315px;
+			height: 110px;
+			background-color: $brand-color;
+			text-align: center;
+			display: table-cell;
+  			vertical-align: middle;
+
+			span {
+				font-family: OswaldStencil-Bold;
+				font-size: 30px;
+				color: $dark-grey-text;
+				line-height: 45px;
+			}
+		}
+
+		.contact-triangle {
+			border-left: 158px solid transparent;
+			border-right: 158px solid transparent;
+  			border-top: 50px solid $brand-color;
+		}
+
+		form {
+			::-webkit-input-placeholder {
+			   color: $dark-grey-text;
+			}
+			:-moz-placeholder { /* Firefox 18- */
+			   color: $dark-grey-text;  
+			}
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color: $dark-grey-text;  
+			}
+			:-ms-input-placeholder {  
+			   color: $dark-grey-text;  
+			}
+
+			
+			text-align: center;
+			.text-field {
+				font-family: Lato-Regular;
+				font-size: 15px;
+				line-height: 24px;
+
+				text-align: center;
+				width: 222px;
+				padding: 10px 10px;
+				background-color: transparent;
+				border: 1px solid $white-text;
+				margin-top: 30px;
+				margin-left: auto;
+				outline: none;
+				color: $white-text
+			}
+
+			textarea {
+					height: 130px;	
+			}
+
+			input[type=submit] {
+				padding:10px 35px; 
+				background: $brand-color; 
+				border:0 none;
+				cursor:pointer;
+				-webkit-border-radius: 20px;
+				border-radius: 20px; 
+				margin-top: 0px;
+				margin-bottom: 15px;
+				font-size: 14px;
+			  	font-family: arial;
+			  	font-weight: bold;
+		  		text-transform: uppercase;
+			}
+		}
+
+	}
+}
+
+
+/**
+* Blog
+*/
+
+.bar {
+	background-color: $transparent-dark-blue;
+	background-color: rgba(15, 25, 38, 0.8);
+	height: 50px;
+	text-align: center;
+	font-family: Lato-Regular;
+	font-size: 32px;
+	color: $light-blue;
+}
+.blog {
+	text-align: center;
+
+
+	.title {
+		font-family: AbadiMT-CondensedExtraBold;
+		font-size: 54px;
+		color: $dark-text;
+		line-height: 62px;
+		text-transform: uppercase
+	}
+
+	.posts {
+		padding-top: 140px;
+		padding-bottom: 125px;
+		.post{
+			display: inline-block;
+			.square {
+				border: 2px solid $medium-blue;
+				width: 275px;
+				height: 275px;
+				display: inline-block;
+				position: relative;
+
+				.date {
+					background-color: $transparent-dark-blue;
+					background-color: rgba(15, 25, 38, 0.8);
+					position: absolute;
+					right: 0px;
+					bottom: 5px;
+		
+					span	 {
+						font-family: Avenir-Book;
+						font-size: 20px;
+						color: $white-text;
+						line-height: 27px;
+					}
+					
+				}
+				.corner-triangle {
+					width: 0;
+					height: 0;
+					border-top: 100px solid $brand-color;
+					border-left: 100px solid transparent;
+					position: absolute;
+					right: 0px;
+					top: 0px;
+				}
+
+			}
+
+
+
+			.caption {
+				border-top: 4px solid $brand-color;
+				width: 275px; 
+				font-family: AbadiMT-CondensedExtraBold;
+				font-size: 54px;
+				color: $dark-text;
+
+				background: -moz-linear-gradient(top,  rgba(15,25,38,1) 0%, rgba(0,1,1,0) 98%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(15,25,38,1)), color-stop(98%,rgba(0,1,1,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(15,25,38,1) 0%,rgba(0,1,1,0) 98%,rgba(0,0,0,0) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1926', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+				a {
+					font-family: Avenir-Medium;
+					font-size: 14px;
+					color: $dark-grey-text;
+					line-height: 19px;
+
+					a:hover {
+						color: $brand-color;
+					}
+				}
+
+			}
+
+		}
+	}
+
+
+
+}
+
+/**
+* Footer
+*/
+footer {
+
+	background-color: $dark-blue-background;
+	background-image: url('../images/background.jpg');
+	background-size: 1440px 810px;
+	background-repeat: repeat-x;
+	height: 288px;
+	border-top: 1px solid $brand-color; 
+	margin-top: 50px;
+	background-attachment: fixed;
+
+	.footer-content {
+		width: 50%;
+		height: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 90px;
+		
+		.footer-logo {
+			img {
+				width: 103px;
+			}
+			display: inline-block;
+		}
+		.footer-text {
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: 20px;
+			margin-left: -38px;
+			.footer-links, a {
+				font-family: Avenir;
+				font-weight: light;
+				font-size: 12px;
+				color: $white-text;
+
+				a:hover {
+					color: $light-grey-text;
+				}
+			}
+
+			.footer-copyright {
+				font-family: Arial;
+				font-weight: bold;
+				font-size: 12px;
+				color: $light-grey-text;
+				margin-left: 20px;
+			}
+		}
+
+	}
 
 }

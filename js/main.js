@@ -1,22 +1,51 @@
 $(document).ready(function() {
     carousel_init();
 
+    init_parallax();
+
+    new WOW().init();
+
+    init_header();
+
+    init_feed();
+
+    
+ 
+});
+
+function init_feed(){
+    jQuery.getFeed({
+            url: 'https://fitsquared.wordpress.com/feed/',
+            success: function(feed) {
+            alert(feed.title);
+        }
+    });
+}
+
+function init_header(){
     $(window).scroll(function () {
-        var big_image = $('.logo-img').data('big-logo'); 
-        var small_image = $('.logo-img').data('small-logo'); 
 
         if ($(this).scrollTop() > 560) {
-            $('nav').addClass('fixed');            
-            // $('.logo-img').attr("src", small_image);
-            
+            $('nav').addClass('fixed');  
+            $('nav').removeClass('big');          
 
         } else {
             $('nav').removeClass('fixed');
-            // $('.logo-img').attr("src", big_image);
+            $('nav').addClass('big');
         }   
     });
- 
-});
+}
+
+function init_parallax() {
+    //stellar parallax
+    $.stellar({
+      horizontalOffset: 0,
+      verticalOffset: 0,
+      horizontalScrolling: false,
+    });
+    
+    $('.parallax-panel').stellar();
+}
 
 function carousel_init() {
 
@@ -34,7 +63,7 @@ function carousel_init() {
                 controlNavThumbs : false,
                 animation : 'slide',
                 fullScreen : false,
-                slideshow : false,
+                slideshow : true,
                 slideshowSpeed : 7000,
                 pauseOnHover : true,
                 arrows : true,

@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The most effective, knowledgeable, and friedliest personal training
   serving the Boston and North Shore area.
 baseurl: "" # the subpath of your site, e.g. /blog/
+stylizedurl: "chadmacomber.com"
 phonenumber: "954-682-5739"
 url: "http://chadmacomber.com" # the base hostname & protocol for your site
 linkedin: "https://www.linkedin.com/pub/chad-macomber/74/138/567"
