@@ -18,7 +18,13 @@ function contact_form(e){
     var formObj = $(this);
     var formURL = formObj.attr("action");
 
-    var formData = new FormData(this);
+    var formData = {
+        'name'    : $('input[name=name]').val(),
+        'email'   : $('input[name=email]').val(),
+        'phone'   : $('input[name=phone]').val()
+        'message'   : $('input[name=message]').val()
+    };
+
     $.ajax({
         url: formURL,
         type: 'POST',
