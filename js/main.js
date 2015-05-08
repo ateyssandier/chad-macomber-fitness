@@ -24,16 +24,14 @@ function contact_form(e){
         type: 'POST',
         data:  formData,
         dataType: 'json',
-        encode: true
-    success: function(data, textStatus, jqXHR)
-    {
-        alert('success');
-    },
-     error: function(jqXHR, textStatus, errorThrown) 
-     {
-        alert('fail!!!!');
-     }          
-    });
+        encode: true,
+        success: function(data, textStatus, jqXHR){
+            alert('success');
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('fail!!!!');
+        }          
+        });
     e.preventDefault(); //Prevent Default action. 
     e.unbind();
 }
