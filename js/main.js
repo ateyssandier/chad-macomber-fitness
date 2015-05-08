@@ -9,9 +9,35 @@ $(document).ready(function() {
 
     init_feed();
 
-    
+    //Callback handler for form submit event
+    $("#contact").submit(contact_form); 
  
 });
+
+function contact_form(){
+    var formObj = $(this);
+    var formURL = formObj.attr("action");
+    var formData = new FormData(this);
+    $.ajax({
+        url: formURL,
+    type: 'POST',
+        data:  formData,
+    mimeType:"multipart/form-data",
+    contentType: false,
+        cache: false,
+        processData:false,
+    success: function(data, textStatus, jqXHR)
+    {
+        alert('success');
+    },
+     error: function(jqXHR, textStatus, errorThrown) 
+     {
+        alert('fail!!!!');
+     }          
+    });
+    e.preventDefault(); //Prevent Default action. 
+    e.unbind();
+}
 
 function init_feed(){
     jQuery.getFeed({
