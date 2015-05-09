@@ -3,11 +3,13 @@ $(document).ready(function() {
 
     init_parallax();
 
-    new WOW().init();
-
     init_header();
 
     init_feed();
+
+
+    new WOW().init();
+
 
     //Callback handler for form submit event
     $("#contact").submit(contact_form); 
@@ -33,11 +35,12 @@ function contact_form(e){
         encode: true,
         success: function(data, textStatus, jqXHR){
             alert('success');
+            $('#thanks').css('visibility', 'visibile');
+            $('##contact')[0].reset();
 
         },
         error: function(jqXHR, textStatus, errorThrown){
             alert('fail!!!!');
-            $('##contact')[0].reset();
         }          
         });
     e.preventDefault(); //Prevent Default action. 
@@ -47,7 +50,28 @@ function init_feed(){
     jQuery.getFeed({
             url: 'http://blog.alexteyssandier.com/rss.xml',
             success: function(feed) {
-            alert(feed.title);
+                var posts = feed.items;
+                var post_classes = ['first', 'second', 'third'];
+                for(var i=0; i<3; i++){
+                    var post = posts[i];
+                    var title = post.title;
+                    var description  = $.parseHTML( post.description );
+                    var link = post.link;
+                    var date = post.updated;
+                    var image = $(description).find('img').attr('src');
+
+                    var d=Date.parse(date);
+                    
+                    $('.posts').find('.'+post_classes[i]).find('.date').find('span').text(d.toString('MMMM d, yyyy'));
+                    $('.posts').find('.'+post_classes[i]).find('.caption').find('span').text(title);
+                    $('.posts').find('.'+post_classes[i]).find('.caption').find('a').attr('href', link);
+
+                    if (image != undefined){
+                        $('.posts').find('.'+post_classes[i]).find('.square').css('background-image', 'url(' + image + ')');                        
+                    }
+
+                    
+                }
         }
     });
 }
