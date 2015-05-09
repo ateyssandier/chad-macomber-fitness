@@ -35,7 +35,7 @@ function contact_form(e){
         encode: true,
         success: function(data, textStatus, jqXHR){
             alert('success');
-            $('#thanks').css('visibility', 'visibile');
+            $('#thanks').css('visibility', 'visible');
             $('#contact')[0].reset();
 
         },
