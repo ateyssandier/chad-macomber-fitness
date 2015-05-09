@@ -36,7 +36,7 @@ function contact_form(e){
         success: function(data, textStatus, jqXHR){
             alert('success');
             $('#thanks').css('visibility', 'visibile');
-            $('##contact')[0].reset();
+            $('#contact')[0].reset();
 
         },
         error: function(jqXHR, textStatus, errorThrown){
