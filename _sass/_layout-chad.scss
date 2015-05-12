@@ -13,7 +13,7 @@
     	.contact-info {
     		display: inline;
 			.phone-number, .email {
-    			font-family: "Avenir";
+    			font-family: Avenir, Nunito, sans-serif;
     			color: $white-text;
     			font-size: 10px;
     			display: inline;
@@ -247,7 +247,7 @@
 			display: inline-block;
 
 			.square-text {
-				font-family: Avenir-Book;
+				font-family: Avenir, Nunito, sans-serif;
 				font-size: 20px;
 				color: $dark-grey-text;
 				line-height: 30px;
@@ -333,7 +333,7 @@
 				line-height: 29px;
 			}
 			.title-two {
-				font-family: AbadiMT-CondensedExtraBold;
+				font-family: AbadiMT-CondensedExtraBold, Impact;
 				font-size: 64px;
 				color: #FFFFFF;
 				line-height: 50px;
@@ -357,7 +357,7 @@
 
 			.info-overlay {
 		    	span {
-		    		font-family: Avenir-Book;
+		    		font-family: Avenir, Nunito, sans-serif;
 					font-size: 20px;
 					text-align: right;
 			    	color: $white-text;
@@ -424,7 +424,7 @@
 		}
 
 		.thanks {
-    		font-family: Avenir-Book;
+    		font-family: Avenir, Nunito, sans-serif;
 			font-size: 12px;
 	    	color: $white-text;
 	    	text-align: center;
@@ -510,7 +510,7 @@
 
 
 	.title {
-		font-family: AbadiMT-CondensedExtraBold;
+		font-family: AbadiMT-CondensedExtraBold, Impact;
 		font-size: 54px;
 		color: $dark-text;
 		line-height: 62px;
@@ -542,7 +542,7 @@
 					padding-right: 5px;
 		
 					span	 {
-						font-family: Avenir-Book;
+						font-family: Avenir, Nunito, sans-serif;
 						font-size: 20px;
 						color: $white-text;
 						line-height: 27px;
@@ -579,7 +579,7 @@
 				
 
 				span {
-					font-family: AbadiMT-CondensedExtraBold;
+					font-family: AbadiMT-CondensedExtraBold, Impact;
 					font-size: 24px;
 					line-height: 24px;
 					color: $dark-text;
@@ -600,7 +600,7 @@
 
 
 				a {
-					font-family: Avenir-Medium;
+					font-family: Avenir-Medium, Nunito, sans-serif;
 					font-size: 14px;
 					color: $dark-grey-text;
 					line-height: 19px;
@@ -654,7 +654,7 @@ footer {
 			margin-top: 20px;
 			margin-left: -38px;
 			.footer-links, a {
-				font-family: Avenir;
+				font-family: Avenir, Nunito, sans-serif;
 				font-weight: light;
 				font-size: 12px;
 				color: $white-text;
