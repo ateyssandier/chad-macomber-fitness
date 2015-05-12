@@ -313,6 +313,10 @@
 	background-attachment: fixed;
 
 	.contact-content {
+		@include media-query($on-laptop) {
+	        max-width: 800px;
+	    }
+
 		max-width: 986px;
 		height: 100%;
 
@@ -397,12 +401,19 @@
 	.form-block {
 		height: 100%;
 		width: 315px;
+		@include media-query($on-laptop) {
+	        width: 250px
+	    }
+
 		background-color: $transparent-dark-blue;
 		background-color: rgba(15, 25, 38, 0.7);
 		float: right;
 
 		.top-rectangle {
 			width: 315px;
+			@include media-query($on-laptop) {
+		        width: 250px
+		    }
 			height: 110px;
 			background-color: $brand-color;
 			text-align: center;
@@ -468,7 +479,7 @@
 			}
 
 			textarea {
-					height: 130px;	
+				height: 130px;	
 			}
 
 			input[type=submit] {
