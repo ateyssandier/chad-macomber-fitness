@@ -34,13 +34,12 @@ function contact_form(e){
         dataType: 'json',
         encode: true,
         success: function(data, textStatus, jqXHR){
-            alert('success');
             $('#thanks').css('visibility', 'visible');
             $('#contact')[0].reset();
 
         },
         error: function(jqXHR, textStatus, errorThrown){
-            alert('fail!!!!');
+                        
         }          
         });
     e.preventDefault(); //Prevent Default action. 

@@ -81,7 +81,7 @@
 
 			a {
 				font-size: 18px;
-				font-style: Lato;
+				font-style: latothin;
 				font-weight: thin;
 				margin-left: 40px;
 
@@ -160,7 +160,7 @@
 	    	border-top: 1px solid $brand-color; 
 
     		a {
-				font-family: "Oswald Regular";
+				font-family: "oswald_regularregular";
 				margin-left: 30px;
 				color: $white-text;
 				vertical-align: middle;
@@ -194,12 +194,12 @@
 
     .name-overlay {
     	.title {
-			font-family: "Oswald Stencil";
+			font-family: "oswald_stencilregular";
     		font-weight: bold;    
     		font-size: 48pt;		
     	}
     	.subtitle {
-    		font-family: "Lato";
+    		font-family: "latothin";
     		font-weight: thin;
     		font-size: 20pt;
     		line-height: 5px;
@@ -279,7 +279,7 @@
 	 		display: block;
 			margin-top: -43px;
 		  	font-size: 15px;
-		  	font-family: arial;
+		  	font-family: Arial;
 		  	font-weight: bold;
 	  		text-transform: uppercase;
 		  	margin-left: -40px;
@@ -327,7 +327,7 @@
 		.title-text {
 			text-transform: uppercase;
 			.title-one {
-				font-family: Lato-Regular;
+				font-family: 'latoregular';
 				font-size: 24px;
 				color: #4DBA00;
 				line-height: 29px;
@@ -410,7 +410,7 @@
   			vertical-align: middle;
 
 			span {
-				font-family: OswaldStencil-Bold;
+				font-family: 'oswald_stencilregular';
 				font-size: 30px;
 				color: $dark-grey-text;
 				line-height: 45px;
@@ -449,7 +449,7 @@
 			
 			text-align: center;
 			.text-field {
-				font-family: Lato-Regular;
+				font-family: 'latoregular';
 				font-size: 15px;
 				line-height: 24px;
 
@@ -481,7 +481,7 @@
 				margin-top: 0px;
 				margin-bottom: 15px;
 				font-size: 14px;
-			  	font-family: arial;
+			  	font-family: Arial;
 			  	font-weight: bold;
 		  		text-transform: uppercase;
 			}
@@ -500,7 +500,7 @@
 	background-color: rgba(15, 25, 38, 0.8);
 	height: 50px;
 	text-align: center;
-	font-family: Lato-Regular;
+	font-family: 'latoregular';
 	font-size: 32px;
 	color: $light-blue;
 	margin-top: 180px;
