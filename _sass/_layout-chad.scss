@@ -65,6 +65,7 @@
 	.site-nav.fixed {
 		position: fixed;
 		top: 0px;
+
 		background-color: $transparent-dark-blue;
 		background-color: rgba(15, 25, 38, 0.8);
 		height: 70px;
@@ -77,6 +78,10 @@
 
 		.links {
 			margin-left: 40px;
+			@include media-query($on-palm) {
+				margin-left: 0px;
+			}
+
 			display: inline-block;
 
 			a {
@@ -84,6 +89,10 @@
 				font-style: latothin;
 				font-weight: thin;
 				margin-left: 40px;
+
+				@include media-query($on-palm) {
+					margin-left: 10px;
+				}
 
 		  		transition: all 0.3s ease-in;
 	  			-moz-transition: all 0.3s ease-in;
@@ -113,6 +122,10 @@
 	.site-nav.big {
 		height: 118px;
 
+		@include media-query($on-palm) {
+			height: 90px;
+		}
+
 	  	transition: height 0.3s ease-in;
   		-moz-transition: height 0.3s ease-in;
   		-webkit-transition: height 0.3s ease-in;
@@ -125,10 +138,17 @@
 				display: inline-block;
 				position: absolute;
 				z-index: 9999;
+				@include media-query($on-palm) {
+					display: none;
+				}
 			}
 
 			img.small {
 				display: none;
+				@include media-query($on-palm) {
+					display: inline;
+					width: 150px;
+				}
 			}
 
 			-webkit-transition:width margin-top 0.3s ease-in;
@@ -140,9 +160,26 @@
 		.links {
 			margin-left: 200px;
 
+			@include media-query($on-palm) {
+			  display: inline;
+			  margin-left: auto;
+			}
+
 			a {
 				font-size: 38px;
-
+				@include media-query($on-smalltab) {
+				  font-size: 20px;
+				  margin-left: 15px;
+				}
+				@include media-query($on-laptop) {
+				  font-size: 25px;
+				  margin-left: 20px;
+				}
+				@include media-query($on-tiny) {
+			  		font-size: 18px;
+			  		margin-left: 10px;
+				}
+				
 		  		transition: all 0.3s ease-in;
 	  			-moz-transition: all 0.3s ease-in;
   				-webkit-transition: all 0.3s ease-in;
@@ -215,6 +252,15 @@
     	padding-bottom: 30px;
     	padding-left: 10px;
     	position: absolute;
+
+	    @include media-query($on-palm) {
+	    	margin-left: 0px;
+
+	    }
+	    @include media-query($on-laptop) {
+	    	margin-left: 0px;
+
+	    }
     }
 
 
@@ -229,6 +275,12 @@
 	width: $content-width;
 	padding-left: 0px;
 	padding-right: 0px;
+	@include media-query($on-palm) {
+		width: auto;
+	}
+	@include media-query($on-laptop) {
+		width: auto;
+	}
 
 	.squares {
 		padding-top: 175px;
@@ -245,6 +297,20 @@
 			padding-left: 20px;
 			padding-right: 20px;
 			display: inline-block;
+
+			@include media-query($on-palm) {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-top: 50px;
+			}
+
+			@include media-query($on-laptop) {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-top: 50px;
+			}
 
 			.square-text {
 				font-family: Avenir, Nunito, sans-serif;
@@ -313,10 +379,6 @@
 	background-attachment: fixed;
 
 	.contact-content {
-		@include media-query($on-laptop) {
-	        max-width: 800px;
-	    }
-
 		max-width: 986px;
 		height: 100%;
 
@@ -326,6 +388,14 @@
 		float: left;
 		width: 585px;
 		margin-top: 100px;
+
+		@include media-query($on-palm) {
+			display: none;
+		}
+
+		@include media-query($on-laptop) {
+			display: none;
+		}
 
 
 		.title-text {
@@ -401,19 +471,19 @@
 	.form-block {
 		height: 100%;
 		width: 315px;
-		@include media-query($on-laptop) {
-	        width: 250px
-	    }
 
 		background-color: $transparent-dark-blue;
 		background-color: rgba(15, 25, 38, 0.7);
 		float: right;
 
+		@include media-query($on-palm) {
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
 		.top-rectangle {
 			width: 315px;
-			@include media-query($on-laptop) {
-		        width: 250px
-		    }
 			height: 110px;
 			background-color: $brand-color;
 			text-align: center;
@@ -532,6 +602,11 @@
 	.posts {
 		padding-top: 30px;
 		padding-bottom: 125px;
+
+		@include media-query($on-laptop) {
+			  padding-left: 100px;
+			  padding-right: 100px;
+		}
 		.post{
 			display: inline-block;
 			.square {
