@@ -8,7 +8,7 @@ $(document).ready(function() {
     init_feed();
 
 
-    new WOW().init();
+    new WOW().init({'mobile': false;});
 
 
     //Callback handler for form submit event
