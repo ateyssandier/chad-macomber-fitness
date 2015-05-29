@@ -81,6 +81,9 @@
 			@include media-query($on-palm) {
 				margin-left: 0px;
 			}
+			@include media-query($on-tiny) {
+		  		margin-top: 15px;
+			}
 
 			display: inline-block;
 
@@ -104,6 +107,10 @@
 		.logo {
 			margin-top: 6px;
 			width: 150px;
+
+			@include media-query($on-tiny) {
+		  		display: none;
+			}
 
 			img.large {
 				display: none;
@@ -163,6 +170,10 @@
 			@include media-query($on-palm) {
 			  display: inline;
 			  margin-left: auto;
+			}
+
+			@include media-query($on-tiny) {
+				display: block;
 			}
 
 			a {
@@ -239,7 +250,6 @@
     		font-family: "latothin";
     		font-weight: thin;
     		font-size: 20pt;
-    		line-height: 5px;
     	}
     	color: $white-text;
     	height: 122px;	  
@@ -382,6 +392,11 @@
 		max-width: 986px;
 		height: 100%;
 
+		@include media-query($on-tiny) {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
 	}
 
 	.contact-float {
@@ -490,6 +505,7 @@
 			text-align: center;
 			display: table-cell;
   			vertical-align: middle;
+  			border: 1px solid $brand-color;
 
 			span {
 				font-family: 'oswald_stencilregular';
@@ -609,6 +625,11 @@
 			  padding-left: 100px;
 			  padding-right: 100px;
 		}
+
+		@include media-query($on-tiny) {
+		  padding: 0px;	
+		}
+		
 		.post{
 			display: inline-block;
 			.square {
