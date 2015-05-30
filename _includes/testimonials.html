@@ -1,0 +1,11 @@
+  <div class="title-text">
+    <span>see what others are saying</span>
+  </div>
+  <div class="testimonial-bar">
+  	{% for testimonial in site.data.testimonials %}
+	    <div class="testimonial">
+	        <p class="testimonial-title">"{{ testimonial.comment }}"</p>
+	        <p class="testimonial-author">- {{ testimonial.author }}</p>
+	    </div>
+  	{% endfor %}
+  </div>

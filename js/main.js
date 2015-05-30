@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var testimonialCount, currentItem;
     carousel_init();
 
     init_parallax();
@@ -7,6 +8,8 @@ $(document).ready(function() {
 
     init_feed();
 
+    init_testimonials();
+
 
     new WOW({'mobile': false}).init();
 
@@ -14,6 +17,27 @@ $(document).ready(function() {
     $("#contact").submit(contact_form); 
  
 });
+
+function init_testimonials(){
+    $('.testimonial').hide();
+    testimonialCount = $('.testimonial').length;
+    currentItem = 0;
+
+    switchDiv = function() {
+        if (currentItem == testimonialCount - 1) {   
+            $('.testimonial').eq(testimonialCount - 1).hide();
+            currentItem = 0;
+            $('.testimonial').eq(0).fadeIn();
+        }
+        else {        
+            $('.testimonial').eq(currentItem).hide();
+            currentItem = currentItem + 1;
+            $('.testimonial').eq(currentItem).fadeIn();
+        }        
+    }
+
+    setInterval("switchDiv()", 2000);
+}
 
 function contact_form(e){
     var formObj = $(this);
@@ -38,7 +62,8 @@ function contact_form(e){
 
         },
         error: function(jqXHR, textStatus, errorThrown){
-                        
+            $('#thanks').css('visibility', 'visible');
+
         }          
         });
     e.preventDefault(); //Prevent Default action. 

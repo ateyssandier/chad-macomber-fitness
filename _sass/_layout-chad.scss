@@ -521,13 +521,17 @@
   			border-top: 50px solid $brand-color;
 		}
 
-		.thanks {
+		.thanks, .error {
     		font-family: Avenir, Nunito, sans-serif;
 			font-size: 12px;
 	    	color: $white-text;
 	    	text-align: center;
 	    	margin-top: 10px;
 	    	visibility: hidden;
+    	}
+
+    	.error {
+    		color: red;
     	}
 
 		form {
@@ -727,9 +731,62 @@
 
 		}
 	}
+}
 
 
+/**
+*testimonials
+*/
+.testimonial-full {
+	width: 100%;
+	background-color: $dark-blue-background;
+	background-image: url('../images/background.jpg');
+	background-size: 1440px 810px;
+	background-repeat: repeat;
+	height: 329px;
+	background-attachment: fixed;
+	position: relative;
 
+	.title-text{
+		font-family: 'oswald_stencilregular';
+		font-size: 64px;
+		color: $brand-color;
+		line-height: 95px;
+		text-align: center;
+		
+		span {
+		  display: inline-block;
+		  margin-top: 50px;
+		}
+	}
+
+	.testimonial-bar {
+		background-color: $transparent-dark-blue;
+		background-color: rgba(15, 25, 38, 0.8);
+
+		position: absolute; 
+		margin-top: 10px;
+		width: 100%;
+		text-align: center;
+
+		.testimonial {
+			font-family: Avenir, Nunito, sans-serif;
+			color: #FFFFFF;
+			
+			.testimonial-title {
+				font-size: 36px;
+				line-height: 49px;
+			}
+
+			.testimonial-author{
+				font-size: 23px;
+				line-height: 31px;
+				font-weight: Lighter;
+				text-align: right;
+				margin-right: 350px;
+			}
+		}
+	}
 }
 
 /**
