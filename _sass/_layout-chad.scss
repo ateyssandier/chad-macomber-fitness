@@ -754,7 +754,7 @@
 		line-height: 95px;
 		text-align: center;
 
-		@include media-query($on-palm) {
+		@include media-query($on-tiny) {
 			font-size: 50px;
 		}
 		
