@@ -521,17 +521,13 @@
   			border-top: 50px solid $brand-color;
 		}
 
-		.thanks, .error {
+		.thanks{
     		font-family: Avenir, Nunito, sans-serif;
 			font-size: 12px;
 	    	color: $white-text;
 	    	text-align: center;
 	    	margin-top: 10px;
 	    	visibility: hidden;
-    	}
-
-    	.error {
-    		color: red;
     	}
 
 		form {
@@ -613,7 +609,7 @@
 
 	.title {
 		font-family: AbadiMT-CondensedExtraBold, Oswald, Impact;
-                font-weight: bold;
+        font-weight: bold;
 		font-size: 54px;
 		color: $dark-text;
 		line-height: 62px;
@@ -754,8 +750,14 @@
 		line-height: 95px;
 		text-align: center;
 
+		@include media-query($on-laptop) {
+		  font-size: 48px;
+		}
+		@include media-query($on-palm) {
+		  font-size: 42px;
+		}
 		@include media-query($on-tiny) {
-			font-size: 50px;
+	  		font-size: 26px;
 		}
 		
 		span {
@@ -779,7 +781,16 @@
 			
 			.testimonial-title {
 				font-size: 36px;
-				line-height: 49px;
+
+				@include media-query($on-laptop) {
+				  font-size: 28px;
+				}
+				@include media-query($on-palm) {
+				  font-size: 24px;
+				}
+				@include media-query($on-tiny) {
+			  		font-size: 16px;
+				}
 			}
 
 			.testimonial-author{
@@ -788,8 +799,52 @@
 				font-weight: Lighter;
 				text-align: right;
 				margin-right: 350px;
+
+				@include media-query($on-laptop) {
+				  font-size: 20px;
+				  margin-right: 10px;
+				}
+				@include media-query($on-palm) {
+				  font-size: 16px;
+				  margin-right: 10px;
+				}
+				@include media-query($on-tiny) {
+			  		font-size: 12px;
+			  		margin-right: 10px;
+				}
 			}
 		}
+	}
+}
+
+/**
+* other links
+*/
+
+.links-full{
+	text-align: center;
+	
+	.title {
+		font-family: AbadiMT-CondensedExtraBold, Oswald, Impact;
+        font-weight: bold;
+		font-size: 54px;
+		color: $dark-text;
+		line-height: 62px;
+		text-transform: uppercase;
+		margin-top: 10px;
+	}
+
+	img {
+		width: 180px;
+		margin-left: 50px;
+		opacity: 0.4;
+    	filter: alpha(opacity=40);
+    	margin-top: -50px;
+	}
+	img.nick {
+		width: 120px;
+		vertical-align: bottom;
+
 	}
 }
 
@@ -804,7 +859,7 @@ footer {
 	background-repeat: repeat-x;
 	height: 288px;
 	border-top: 1px solid $brand-color; 
-	margin-top: 50px;
+	margin-top: 120px;
 	background-attachment: fixed;
 
 	.footer-content {

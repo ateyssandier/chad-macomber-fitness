@@ -14,7 +14,11 @@ $(document).ready(function() {
     new WOW({'mobile': false}).init();
 
     //Callback handler for form submit event
-    $("#contact").submit(contact_form); 
+    $("#contact").submit(contact_form);
+
+    $(window).on("hashchange", function () {
+        window.scrollTo(window.scrollX, window.scrollY - 100);
+    });
  
 });
 
@@ -57,13 +61,14 @@ function contact_form(e){
         dataType: 'json',
         encode: true,
         success: function(data, textStatus, jqXHR){
+            $('#thanks').html('thank you for your submission!');
             $('#thanks').css('visibility', 'visible');
             $('#contact')[0].reset();
 
         },
         error: function(jqXHR, textStatus, errorThrown){
+            $('#thanks').html('there was an error processing your request');
             $('#thanks').css('visibility', 'visible');
-
         }          
         });
     e.preventDefault(); //Prevent Default action. 
