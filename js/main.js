@@ -25,7 +25,7 @@ $(document).ready(function() {
 });
 
 function init_placeholder(){
-    $('input:text, textarea').each(function(){
+    $('input:text, input:tel, input:email, textarea').each(function(){
     var $this = $(this);
     $this.data('placeholder', $this.attr('placeholder'))
          .focus(function(){$this.removeAttr('placeholder');})
