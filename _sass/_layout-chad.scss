@@ -834,12 +834,37 @@
 		margin-top: 10px;
 	}
 
+	a {
+		@include media-query($on-tiny) {
+			display: block;
+  			margin-top: 20px;
+		}
+	}
+
+	.between-dots{
+		display: none;
+		@include media-query($on-tiny) {
+  			display: block;
+		}
+	}
+
 	img {
 		width: 180px;
 		margin-left: 50px;
 		opacity: 0.4;
     	filter: alpha(opacity=40);
     	margin-top: -50px;
+
+		@include media-query($on-laptop) {
+		  margin-top: 0px;
+		}
+		@include media-query($on-palm) {
+		  margin-top: 0px;
+		}
+		@include media-query($on-tiny) {
+  			margin-top: 0px;
+  			margin-left: 0px;
+		}
 	}
 	img.nick {
 		width: 120px;
